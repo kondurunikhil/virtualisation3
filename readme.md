@@ -103,11 +103,17 @@ sudo make -j 8 install
 
 ```
      make -j 8 modules
+```
+![install](https://github.com/kondurunikhil/virtualisation3/blob/main/images/make-j.png)
+
+```
      sudo make -j 8 INSTALL_MOD_STRIP=1 modules_install
      sudo make -j 4 install 
 ```
 
-![install]()
+![install](https://github.com/kondurunikhil/virtualisation3/blob/main/images/make%20install.png)
+
+![install](https://github.com/kondurunikhil/virtualisation3/blob/main/images/make%20install%20output.png)
 
 17. As there are no errors, we can create a inner VM inside our current VM,
 but first we need to install some extra tools for KVM 
@@ -120,7 +126,7 @@ sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
 sudo kvm-ok
 sudo reboot
 ```
-
+![install](https://github.com/kondurunikhil/virtualisation3/blob/main/images/reboot.png)
 
 18. Now we need to authorize a vm users for the inner VM, and verify our VM functionalities:
 
@@ -176,15 +182,15 @@ sudo virt-manager
 
         Testing the CPUID functionality for '%eax=0x4ffffffe'      
         Ubuntu (Nested VM): sudo cpuid -l 0x4ffffffe
-<img width="692" alt="image" src="">
+<img width="692" alt="image" src="https://github.com/kondurunikhil/virtualisation3/blob/main/images/ubuntu.png">
         GCP host VM : sudo dmesg
-<img width="693" alt="image" src="">
+<img width="693" alt="image" src="https://github.com/kondurunikhil/virtualisation3/blob/main/images/ubuntu1.png">
 
         Testing the CPUID functionality for '%eax=0x4fffffff'
          Ubuntu (Nested VM):: sudo cpuid -l 0x4fffffff
-<img width="693" alt="image" src="">
+<img width="693" alt="image" src="https://github.com/kondurunikhil/virtualisation3/blob/main/images/ubuntu2.png">
            GCP host VM : sudo dmesg
-<img width="668" alt="image" src="">
+<img width="668" alt="image" src="https://github.com/kondurunikhil/virtualisation3/blob/main/images/ubuntu3.png">
 
     
 

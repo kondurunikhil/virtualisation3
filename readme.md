@@ -172,5 +172,20 @@ sudo virt-manager
 21. Performed our exit handling testing on the newly installed inner-VM:
 
 
+#### step 13: intialise two terminals(GCP Host VM , and nested VM terminal Ubuntu) and perform testing for the cpuid functionality : 
+
+        Testing the CPUID functionality for '%eax=0x4ffffffe'      
+        Ubuntu (Nested VM): sudo cpuid -l 0x4ffffffe
+<img width="692" alt="image" src="">
+        GCP host VM : sudo dmesg
+<img width="693" alt="image" src="">
+
+        Testing the CPUID functionality for '%eax=0x4fffffff'
+         Ubuntu (Nested VM):: sudo cpuid -l 0x4fffffff
+<img width="693" alt="image" src="">
+           GCP host VM : sudo dmesg
+<img width="668" alt="image" src="">
+
+    
 
 
